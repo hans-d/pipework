@@ -210,6 +210,10 @@ If you want to attach a container to the Open vSwitch bridge, no problem.
     ovsbr0
     pipework ovsbr0 $(docker run -d mysql /usr/sbin/mysqld_safe) 192.168.1.2/24
 
+Want to use a VLAN? Specify it with -t and it will add a tagged port.
+
+    pipework ovsbr0 $(docker run -d mysql /usr/sbin/mysqld_safe) 192.168.1.2/24 -t 123
+
     
 ## Cleanup
 
